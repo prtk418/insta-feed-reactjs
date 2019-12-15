@@ -11,14 +11,12 @@ class Posts extends React.Component {
     this.props.fetchPosts();
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.newPost) {
-      this.props.posts.unshift(nextProps.newPost);
-    }
-  }
-
   getContent() {
     let { loading, posts } = this.props;
+
+    if (Object.keys(this.props.newPost).length > 0) {
+      this.props.posts.unshift(this.props.newPost);
+    }
 
     switch(loading) {
       case false:
