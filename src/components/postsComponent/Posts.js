@@ -1,33 +1,24 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import './Posts.css';
 
 import Loader from '../loaderComponent/Loader'
 import Post from '../postComponent/Post'
-
-const URL = 'http://localhost:4000/feeds';
+import { fetchPosts } from '../../actions/postActions'
 
 class Posts extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loading: false,
-      posts: []
-    };
+  componentDidMount() {
+    this.props.fetchPosts();
   }
 
-  componentDidMount() {
-    this.setState({loading: true})
-    fetch(URL).then(
-      response => response.json()
-    ).then(
-      json => {
-        this.setState({loading: false, posts: json});
-      }
-    );
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.newPost) {
+      this.props.posts.unshift(nextProps.newPost);
+    }
   }
 
   getContent() {
-    let { loading, posts } = this.state;
+    let { loading, posts } = this.props;
 
     switch(loading) {
       case false:
@@ -50,4 +41,10 @@ class Posts extends React.Component {
   }
 }
 
-export default Posts;
+const mapStateToProps = state => ({
+  loading: state.posts.loading,
+  posts: state.posts.items,
+  newPost: state.posts.item
+});
+
+export default connect(mapStateToProps, { fetchPosts })(Posts);
