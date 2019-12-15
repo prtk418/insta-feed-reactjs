@@ -46,6 +46,7 @@ class AddPost extends React.Component {
           });
         }
         reader.readAsDataURL(file)
+        break;
       default:
         this.setState({
           [e.target.name]: e.target.value
