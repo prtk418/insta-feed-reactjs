@@ -1,0 +1,28 @@
+.add-post {
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  margin-bottom: 60px;
+  padding: 16px;
+}
+
+.add-post__desc {
+  width: 99.7%;
+  padding: 0;
+  border: 1px solid #ccc;
+  height: 30px;
+}
+
+.add-post__image, .add-post__desc {
+  margin-bottom: 5px;
+}
+
+.add-post__image-label {
+  margin-right: 10px;
+}
+
+.add-post__submit {
+  width: 100%;
+  height: 30px;
+  cursor: pointer;
+  font-size: 18px;
+}

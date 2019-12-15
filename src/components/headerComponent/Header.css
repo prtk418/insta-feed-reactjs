@@ -1,0 +1,27 @@
+.header-section {
+  display: flex;
+  height: 77px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgba(var(--b3f,250,250,250),1);
+  border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);
+  justify-content: center;
+}
+
+.header-section .content {
+  max-width: 1010px;
+  padding: 26px 20px;
+  transition: height .2s ease-in-out;
+  width: 100%;
+}
+
+.header-section .content .logo {
+  display: block;
+  background-position: -176px 0px;
+  background-image: url(../../sprite.png);
+  background-size: 405px 379px;
+  height: 35px;
+  width: 176px;
+  text-indent: -1000px;
+}

@@ -1,0 +1,6 @@
+.body-section {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  max-width: 935px;
+}

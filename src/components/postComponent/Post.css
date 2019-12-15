@@ -1,0 +1,34 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  margin-bottom: 60px;
+}
+
+.post .post__user {
+  height: 32px;
+  padding: 16px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.post .post__user .post__user-image img {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+}
+
+.post .post__user .post__user-details {
+  margin-left: 16px;
+}
+
+.post .post__image-desc {
+  padding: 16px;
+}
+
+.post .post__image img {
+  height: auto;
+  max-width: 100%;
+}
