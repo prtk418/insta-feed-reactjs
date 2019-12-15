@@ -11,3 +11,10 @@ export const fetchPosts = () => dispatch => {
       payload: posts
     }));
 }
+
+export const addPost = postData => dispatch => {
+  dispatch({
+    type: ADD_POST,
+    payload: postData
+  });
+}

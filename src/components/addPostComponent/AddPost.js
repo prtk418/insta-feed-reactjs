@@ -1,10 +1,14 @@
 import React from 'react';
 import './AddPost.css';
 
+import { connect } from 'react-redux';
+import { addPost } from '../../actions/postActions';
+
 class AddPost extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      inputKey: Date.now(),
       image: '',
       image_desc: ''
     };
@@ -22,6 +26,12 @@ class AddPost extends React.Component {
       'image': this.state.image,
       'image_desc': this.state.image_desc
     }
+
+    this.props.addPost(post);
+    this.setState({
+      inputKey: Date.now(),
+      image_desc: ''
+    });
   }
 
   onChange(e) {
@@ -48,8 +58,8 @@ class AddPost extends React.Component {
       <div className="add-post">
         <form onSubmit={this.onSubmit}>
           <label className="add-post__image-label">Add image</label>
-          <input className="add-post__image" id="post-image" type="file" name="image" accept="image/*" onChange={this.onChange} required/>
-          <input className="add-post__desc" type="text" name="image_desc" placeholder="About image" onChange={this.onChange} />
+          <input className="add-post__image" id="post-image" type="file" name="image" accept="image/*" onChange={this.onChange} key={this.state.inputKey} required/>
+          <input className="add-post__desc" type="text" name="image_desc" placeholder="About image" onChange={this.onChange} value={this.state.image_desc} />
           <button className="add-post__submit" type="submit">Post</button>
         </form>
       </div>
@@ -57,4 +67,4 @@ class AddPost extends React.Component {
   }
 }
 
-export default AddPost;
+export default connect(null, { addPost })(AddPost);
