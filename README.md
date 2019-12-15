@@ -1,8 +1,26 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# Instagram Feed Using ReactJS
+
+##  Getting started
+
+ 1. `git clone https://github.com/prtk418/insta-feed-reactjs.git`
+ 2. `cd insta-feed-reactjs`
+ 3. `npm run mock:api`
+ 4. `npm install`
+ 5. `yarn start`
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm run mock:api`
+
+Runs the mock api server using `json-server` module.<br />
+Open [http://localhost:4000/feeds](http://localhost:4000/feeds) to view the data in the browser.
+
+The data is populated from [api/db.json](https://github.com/prtk418/insta-feed-reactjs/blob/master/api/db.json) file.
+
+Check [package.json](https://github.com/prtk418/insta-feed-reactjs/blob/master/package.json#L18) file for more details.
 
 ### `yarn start`
 
@@ -66,4 +84,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# insta-feed-reactjs
