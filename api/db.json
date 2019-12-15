@@ -1,0 +1,22 @@
+{
+  "feeds": [
+    {
+    "user_name": "karan",
+    "user_image": "http://localhost:3000/user.png",
+    "image": "http://localhost:3000/1.jpg",
+    "image_desc": "test desc"
+    },
+    {
+      "user_name": "pratik",
+      "user_image": "http://localhost:3000/user.png",
+      "image": "http://localhost:3000/2.jpg",
+      "image_desc": "test desc"
+    },
+    {
+      "user_name": "pratik new",
+      "user_image": "http://localhost:3000/user.png",
+      "image": "http://localhost:3000/3.jpg",
+      "image_desc": "test desc latest"
+    }
+  ]
+}
